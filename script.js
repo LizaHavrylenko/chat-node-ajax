@@ -47,18 +47,18 @@ sendMessage.onclick = () => {
 
  
  
-var ajaxRequest = function(options){
-  var url = options.url || '/';
-  var method = options.method || 'GET';
-  var callback = options.callback || function(){};
-  var data = options.data || {};
-  var xmlHttp = new XMLHttpRequest();
+const ajaxRequest = (options) => {
+  const url = options.url || '/';
+  const method = options.method || 'GET';
+  const callback = options.callback || function(){};
+  const data = options.data || {};
+  const xmlHttp = new XMLHttpRequest();
 
   xmlHttp.open(method, url, true);
   xmlHttp.setRequestHeader('Content-Type', 'application/json');
   xmlHttp.send(JSON.stringify(data));
 
-  xmlHttp.onreadystatechange  = function(){
+  xmlHttp.onreadystatechange  = () => {
       if( xmlHttp.readyState === 4 && xmlHttp.status == 200) {
         callback(xmlHttp.responseText);
       }
