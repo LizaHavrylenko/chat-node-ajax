@@ -1,8 +1,9 @@
-var app = require('express')();
-var http = require('http').Server(app);
-var bodyParser = require('body-parser');
-var allMessages = [];
-var allUsers = [];
+const app = require('express')();
+const http = require('http').Server(app);
+const bodyParser = require('body-parser');
+const allMessages = [];
+const allUsers = [];
+
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
