@@ -7,17 +7,15 @@
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
         <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
         <title>Chat</title>
-     
         <link rel="stylesheet" media="screen" href="test-styles.css">
-       
         <script src="script.js" defer></script>
     </head>
     <body>
-    <div class = "container">
-      <div class = "row no-gutter"> 
+  <div class = "container">
+    <div class = "row no-gutter"> 
       <div class = "col-md-12 ">
         <h2>Enter the Chat</h2>
-        <form class = "form-inline">
+        <form>
             <div class = "form-group">
                <input type = "text" class = "form-control" placeholder = "Name" id = "nameInput">
             </div>
@@ -27,41 +25,36 @@
             <button type = "button" class = "btn btn-success" id = "nameButton">Ok</button>
         </form>
       </div> 
-      </div>
-      <div class = "row no-gutter">
+    </div>
+
+    <div class = "row no-gutter">
       <div class = "col-md-12">
         <h2>Chat</h2>
       </div>
-      </div>
-      <div class = "row">
-      <div class = "chat-content"    >
-      <div class = "col-md-4 usersList">
-         
+    </div>
+
+    <div class = "row no-gutter chat-content">
+      <div class = "col-md-5 usersList">
         <ul id = "usersList"  class = "list-group user ">    
-        </ul>
-         
+        </ul>  
       </div> 
-      <div class = "col-md-8 ">
-          
-      <div class="messages" id = "allMessages">
+      <div class = "col-md-7 messagesList">  
+        <div class="messages" id = "allMessages">
+        </div>
       </div>
-      </div>
-      </div>
-      </div>
-      </div>
-      <div class = "container">
-      <div class = "send-message-wrapper">    
-    <div class = "row no-gutter">
-    <div class = "col-md-10"> 
+    </div>
+
+    <div class = "row no-gutter send-message-wrapper">
+      <div class = "col-md-10"> 
       <div class = "inputForm">   
-      <input type = "text" class = "form-control" placeholder = "Message" id = "messageInput">    
+        <input type = "text" class = "form-control" placeholder = "Message" id = "messageInput">    
+      </div>
+      </div>
+      <div class = "col-md-2 message-button">
+        <input type = "button" class = "btn btn-success" value = "Send" id = "sendMessage">
+      </div>
     </div>
-    </div>
-    <div class = "col-md-2">
-      <input type = "button" class = "btn btn-success" value = "Send" id = "sendMessage">
-    </div>
-    </div>
-    </div>  
-    </div>
+
+  </div> 
     </body>
     </html>

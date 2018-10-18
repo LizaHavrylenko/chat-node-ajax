@@ -1,5 +1,6 @@
 .container{
     width:50%;
+    margin-bottom: 100px;
 }
 .no-gutter > [class*='col-'] {
     padding-right:0 !important;
@@ -9,10 +10,6 @@
     width:100%;
     display: flex;
     flex-direction: column;
-  
-}
-form{
-    display:block;
 }
  
  .form-group{
@@ -63,13 +60,16 @@ form{
   font-size:14px;
 }
 .send-message-wrapper{
-    margin-top:20px;
-     
+    margin-top:20px; 
+}
+.message-button{
+    display:flex;
+    justify-content:flex-end;
 }
 .messages{
   height:350px;
 }
-div.col-md-8{
+.messagesList{
     height:350px;
     background:#eeeedd;
     border:1px solid #e7eaec; 
