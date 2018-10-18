@@ -68,31 +68,30 @@ const ajaxRequest = (options) => {
  
 
 
-var getData = function(){
+const getData = () => {
     ajaxRequest({
         method:'GET',
         url:'/allMessages',
-        callback: function(msg){
+        callback: (msg) => {
 
-            
             msg = JSON.parse(msg);
             allMessages.innerHTML = '';
-            for(var i in msg){
+            for(let i in msg){
                 if (msg.hasOwnProperty(i)){
-                    var time = new Date(msg[i].timestamp);
-                    var element = document.createElement('div');
+                    const time = new Date(msg[i].timestamp);
+                    const element = document.createElement('div');
                     element.setAttribute ('class', 'element');
                     element.setAttribute ('id', 'message-placeholder');
-                    var messageText = document.createElement('span');
+                    const messageText = document.createElement('span');
                     messageText.setAttribute('class', 'message-text');
                     messageText.innerText = msg[i].text; 
-                    var messageCreator = document.createElement('span'); 
+                    const messageCreator = document.createElement('span'); 
                     messageCreator.setAttribute('class', 'creator');
                     messageCreator.innerText = msg[i].name + '(@'+msg[i].nickName + ')' ; 
-                    var timestamp = document.createElement('span'); 
+                    const timestamp = document.createElement('span'); 
                     timestamp.setAttribute ('class', 'time');
                     timestamp.innerText = time.getHours()+':'+time.getMinutes()+':'+time.getSeconds();
-                    var wrapper = document.createElement('div');
+                    const wrapper = document.createElement('div');
                     wrapper.setAttribute('class', 'wrapper');
                     allMessages.appendChild(element);
                     element.appendChild(wrapper);
@@ -102,10 +101,7 @@ var getData = function(){
                      
                     if(msg[i].text.includes('@'+ nickName)){
                      element.style.background = '#99ff99';
-                     };
-          
-                     
-                     
+                     };   
                 }
             }
         }
