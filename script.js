@@ -29,6 +29,7 @@ nameButton.onclick = () => {
    
 sendMessage.onclick = () => {
     const timestamp =  new Date();
+    console.log(timestamp);
     const  data = {
     name: name,
     nickName: nickName,
@@ -66,7 +67,12 @@ const ajaxRequest = (options) => {
 };
 
  
-
+function addZero(i) {
+    if (i < 10) {
+        i = "0" + i;
+    }
+    return i;
+};
 
 const getData = () => {
     ajaxRequest({
@@ -90,7 +96,7 @@ const getData = () => {
                     messageCreator.innerText = msg[i].name + '(@'+msg[i].nickName + ')' ; 
                     const timestamp = document.createElement('span'); 
                     timestamp.setAttribute ('class', 'time');
-                    timestamp.innerText = time.getHours()+':'+time.getMinutes()+':'+time.getSeconds();
+                    timestamp.innerText = `${addZero(time.getHours())}: ${addZero(time.getMinutes())}: ${addZero(time.getSeconds())}`;
                     const wrapper = document.createElement('div');
                     wrapper.setAttribute('class', 'wrapper');
                     allMessages.appendChild(element);
