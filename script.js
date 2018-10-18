@@ -131,10 +131,10 @@ getData();
 getNames();
  
 
-setInterval(function(){
+setInterval(() => {
     getData();
 }, 1000);
-setInterval(function(){
+setInterval(() => {
     getNames();
 }, 1000); 
 
