@@ -108,16 +108,16 @@ const getData = () => {
     });
 };
 
-var getNames = function(){
+const getNames = () => {
     ajaxRequest({
         method:'GET',
         url:'/allUsers',
-        callback: function(entry){
+        callback: (entry) => {
             entry = JSON.parse(entry);
             allUsers.innerHTML = '';
-            for(var i in entry){
+            for(let i in entry){
                 if (entry.hasOwnProperty(i)){
-                    var userInList = document.createElement('li');
+                    const userInList = document.createElement('li');
                     userInList.innerText = entry[i].name + '(@'+entry[i].nickName +')';
                     allUsers.appendChild(userInList); 
                 }
