@@ -10,10 +10,11 @@ var allUsers = document.getElementById('usersList');
 
 var name = 'Name';
 var nickName = 'NickName'; 
-
+ 
 nameButton.onclick = function(){
-   name = nameInput.value || 'Name',
-   nickName = nickNameInput.value || 'NickName'
+   name = nameInput.value || 'Name';
+   nickName = nickNameInput.value || 'NickName';
+   console.log(name, nickName);
    var info = {
    name: name,
    nickName: nickName
@@ -25,9 +26,9 @@ nameButton.onclick = function(){
     url:'/allUsers',
     data:info
 });
-    
-};
 
+};
+   
 sendMessage.onclick = function(){
     var timestamp =  new Date();
     var data = {
@@ -36,7 +37,7 @@ sendMessage.onclick = function(){
     text: messageInput.value,
     'timestamp': timestamp
     };
-
+    
     messageInput.value = '';
       
 

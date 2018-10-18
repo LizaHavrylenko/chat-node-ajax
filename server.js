@@ -4,22 +4,22 @@ var bodyParser = require('body-parser');
 var allMessages = [];
 var allUsers = [];
 app.use(bodyParser.json());
-app.use(bodyParser.urlencoded());
+app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/index.html');
+    res.sendFile(__dirname + '/test-html.html');
 })
 app.get('/script.js', function(req, res){
     res.sendFile(__dirname + '/script.js');
 })
-app.get('/styles.css', function(req, res){
-    res.sendFile(__dirname + '/styles.css');
+app.get('/test-styles.css', function(req, res){
+    res.sendFile(__dirname + '/test-styles.css');
 })
 app.get('/allMessages', function(req, res){
     res.json(allMessages);
 })
 app.post('/allMessages', function(req, res){
-    if(allMessages.length >= 100){ //is is the right place for this function?
+    if(allMessages.length >= 100){  
             allMessages.shift();
         } 
     allMessages.push(req.body); 
