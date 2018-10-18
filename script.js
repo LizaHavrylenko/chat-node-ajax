@@ -93,7 +93,7 @@ const getData = () => {
                     messageText.innerText = msg[i].text; 
                     const messageCreator = document.createElement('span'); 
                     messageCreator.setAttribute('class', 'creator');
-                    messageCreator.innerText = msg[i].name + '(@'+msg[i].nickName + ')' ; 
+                    messageCreator.innerText = `${msg[i].name}(@${msg[i].nickName})`; 
                     const timestamp = document.createElement('span'); 
                     timestamp.setAttribute ('class', 'time');
                     timestamp.innerText = `${addZero(time.getHours())}: ${addZero(time.getMinutes())}: ${addZero(time.getSeconds())}`;
@@ -124,7 +124,7 @@ const getNames = () => {
             for(let i in entry){
                 if (entry.hasOwnProperty(i)){
                     const userInList = document.createElement('li');
-                    userInList.innerText = entry[i].name + '(@'+entry[i].nickName +')';
+                    userInList.innerText = `${msg[i].name}(@${msg[i].nickName})`;
                     allUsers.appendChild(userInList); 
                 }
             }
