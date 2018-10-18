@@ -16,16 +16,21 @@
 
 .chat-content {
   height: 350px;
-  border: 1px solid #e7eaec; }
+  border: 1px solid #e7eaec;
+  overflow-y: visible; }
   .chat-content .usersList {
+    height: 350px;
+    border: 1px solid #e7eaec;
     overflow-y: auto; }
     .chat-content .usersList ul {
       height: 350px;
       display: flex;
       flex-direction: column; }
   .chat-content .messagesList {
-    background: #eeeedd;
-    overflow-y: auto; }
+    height: 350px;
+    border: 1px solid #e7eaec;
+    overflow-y: auto;
+    background: #eeeedd; }
 
 .user {
   font-size: 17px; }

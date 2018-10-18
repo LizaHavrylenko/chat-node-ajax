@@ -1,7 +1,4 @@
 @import 'mixins';
-
-$time-grow: 1;
-$creator-grow: 2;
  
 .container{
   max-width:600px;
@@ -23,9 +20,9 @@ min-width:200px;
 }
 
 .chat-content{
-  @include chat-inside; 
+  @include chat-inside(chat-content); 
   .usersList{
-    overflow-y:auto;
+    @include chat-inside(no-argument); 
     ul{
       height:350px;
       display:flex;
@@ -33,8 +30,8 @@ min-width:200px;
     }
   }
   .messagesList{ 
+    @include chat-inside(no-argument);  
     background:#eeeedd;
-    overflow-y:auto; 
   }
 }
 
