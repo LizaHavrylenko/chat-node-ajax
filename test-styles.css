@@ -71,6 +71,7 @@
 .message-button{
     display:flex;
     justify-content: center;
+    padding-left:5 !important;
 }
 .messages{
   height:350px;
@@ -91,3 +92,4 @@ ul{
     padding-right:0 !important;
     padding-left:0 !important;
 }
+ 
