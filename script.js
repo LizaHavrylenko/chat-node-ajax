@@ -29,7 +29,6 @@ nameButton.onclick = () => {
    
 sendMessage.onclick = () => {
     const timestamp =  new Date();
-    console.log(timestamp);
     const  data = {
     name: name,
     nickName: nickName,
