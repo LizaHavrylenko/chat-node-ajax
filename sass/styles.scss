@@ -1,0 +1,87 @@
+@import 'mixins';
+
+$time-grow: 1;
+$creator-grow: 2;
+ 
+.container{
+  max-width:600px;
+  margin: 0 auto;
+  margin-bottom: 100px;
+}
+.no-gutter > [class*='col-'] {
+  padding-right:0 !important;
+  padding-left:0 !important;
+}
+
+#nameButton{
+  width: 50px;
+}
+
+.form-group{
+width:40%;
+min-width:200px;
+}
+
+.chat-content{
+  @include chat-inside; 
+  .usersList{
+    overflow-y:auto;
+    ul{
+      height:350px;
+      display:flex;
+      flex-direction:column;
+    }
+  }
+  .messagesList{ 
+    background:#eeeedd;
+    overflow-y:auto; 
+  }
+}
+
+.user{
+  font-size:17px;
+}
+ 
+ 
+.messages{
+  height:350px;
+
+  .wrapper{
+    display:flex;
+    flex-direction: row;
+    padding-bottom:10px;
+  }
+  .time{
+    @include message-info(time);
+  }
+  .creator {
+    @include message-info(creator);
+  }
+  .element{
+    background-color:rgb(255,255,255);
+    border-radius:5px;
+    margin-top:10px;
+    padding:5px;
+  }
+  .message-text{
+    font-size:14px;
+  }
+}
+
+.send-message-wrapper{
+  margin-top:20px; 
+
+  .inputForm{
+    padding-left:0 !important;
+  }
+  .message-button{
+    display:flex;
+    justify-content: flex-end;
+    padding-right:0 !important;
+  }
+}
+
+
+
+ 
+  

@@ -1,0 +1,10 @@
+@mixin chat-inside{
+    height: 350px;
+    border:1px solid #e7eaec;  
+  } 
+  
+  @mixin message-info($element){
+    flex-grow: if($element == time, $time-grow, $creator-grow);
+    font-size:15px;
+    color:black;
+  }

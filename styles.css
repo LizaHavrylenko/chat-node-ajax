@@ -1,0 +1,62 @@
+.container {
+  max-width: 600px;
+  margin: 0 auto;
+  margin-bottom: 100px; }
+
+.no-gutter > [class*='col-'] {
+  padding-right: 0 !important;
+  padding-left: 0 !important; }
+
+#nameButton {
+  width: 50px; }
+
+.form-group {
+  width: 40%;
+  min-width: 200px; }
+
+.chat-content {
+  height: 350px;
+  border: 1px solid #e7eaec; }
+  .chat-content .usersList {
+    overflow-y: auto; }
+    .chat-content .usersList ul {
+      height: 350px;
+      display: flex;
+      flex-direction: column; }
+  .chat-content .messagesList {
+    background: #eeeedd;
+    overflow-y: auto; }
+
+.user {
+  font-size: 17px; }
+
+.messages {
+  height: 350px; }
+  .messages .wrapper {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 10px; }
+  .messages .time {
+    flex-grow: 1;
+    font-size: 15px;
+    color: black; }
+  .messages .creator {
+    flex-grow: 2;
+    font-size: 15px;
+    color: black; }
+  .messages .element {
+    background-color: white;
+    border-radius: 5px;
+    margin-top: 10px;
+    padding: 5px; }
+  .messages .message-text {
+    font-size: 14px; }
+
+.send-message-wrapper {
+  margin-top: 20px; }
+  .send-message-wrapper .inputForm {
+    padding-left: 0 !important; }
+  .send-message-wrapper .message-button {
+    display: flex;
+    justify-content: flex-end;
+    padding-right: 0 !important; }
