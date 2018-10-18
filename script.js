@@ -28,8 +28,8 @@ nameButton.onclick = () => {
 };
    
 sendMessage.onclick = () => {
-    var timestamp =  new Date();
-    var data = {
+    const timestamp =  new Date();
+    const  data = {
     name: name,
     nickName: nickName,
     text: messageInput.value,
