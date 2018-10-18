@@ -1,21 +1,20 @@
 (function(){
 
-var nameInput = document.getElementById('nameInput');
-var nickNameInput = document.getElementById('nickNameInput');
-var nameButton = document.getElementById('nameButton');
-var allMessages = document.getElementById('allMessages');
-var messageInput = document.getElementById('messageInput');
-var sendMessage = document.getElementById('sendMessage');
-var allUsers = document.getElementById('usersList');
+const nameInput = document.getElementById('nameInput');
+const nickNameInput = document.getElementById('nickNameInput');
+const nameButton = document.getElementById('nameButton');
+const allMessages = document.getElementById('allMessages');
+const messageInput = document.getElementById('messageInput');
+const sendMessage = document.getElementById('sendMessage');
+const allUsers = document.getElementById('usersList');
 
-var name = 'Name';
-var nickName = 'NickName'; 
+let name = 'Name';
+let nickName = 'NickName'; 
  
-nameButton.onclick = function(){
+nameButton.onclick = () => {
    name = nameInput.value || 'Name';
    nickName = nickNameInput.value || 'NickName';
-   console.log(name, nickName);
-   var info = {
+   const info = {
    name: name,
    nickName: nickName
     };
@@ -26,10 +25,9 @@ nameButton.onclick = function(){
     url:'/allUsers',
     data:info
 });
-
 };
    
-sendMessage.onclick = function(){
+sendMessage.onclick = () => {
     var timestamp =  new Date();
     var data = {
     name: name,
@@ -40,7 +38,6 @@ sendMessage.onclick = function(){
     
     messageInput.value = '';
       
-
     ajaxRequest({
         'method':'POST',
         'url':'/allMessages',
