@@ -123,7 +123,7 @@ const getNames = () => {
             for(let i in entry){
                 if (entry.hasOwnProperty(i)){
                     const userInList = document.createElement('li');
-                    userInList.innerText = `${msg[i].name}(@${msg[i].nickName})`;
+                    userInList.innerText = `${entry[i].name}(@${entry[i].nickName})`;
                     allUsers.appendChild(userInList); 
                 }
             }
