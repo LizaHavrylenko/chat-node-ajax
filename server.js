@@ -7,13 +7,13 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 app.get('/', function(req, res){
-    res.sendFile(__dirname + '/test-html.html');
+    res.sendFile(__dirname + '/index.html');
 })
 app.get('/script.js', function(req, res){
     res.sendFile(__dirname + '/script.js');
 })
-app.get('/test-styles.css', function(req, res){
-    res.sendFile(__dirname + '/test-styles.css');
+app.get('/styles.css', function(req, res){
+    res.sendFile(__dirname + '/styles.css');
 })
 app.get('/allMessages', function(req, res){
     res.json(allMessages);
