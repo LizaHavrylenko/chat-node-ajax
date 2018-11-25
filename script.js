@@ -95,7 +95,7 @@ const getData = () => {
                     messageCreator.innerText = `${msg[i].name}(@${msg[i].nickName})`; 
                     const timestamp = document.createElement('span'); 
                     timestamp.setAttribute ('class', 'time');
-                    timestamp.innerText = `${addZero(time.getHours())}: ${addZero(time.getMinutes())}: ${addZero(time.getSeconds())}`;
+                    timestamp.innerText = `${addZero(time.getHours())} : ${addZero(time.getMinutes())} : ${addZero(time.getSeconds())}`;
                     const wrapper = document.createElement('div');
                     wrapper.setAttribute('class', 'wrapper');
                     allMessages.appendChild(element);

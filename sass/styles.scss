@@ -24,6 +24,10 @@ min-width:200px;
   .usersList{
     @include chat-inside(no-argument); 
     ul{
+      padding-left: 16px;
+      padding-right: 16px;
+      padding-top: 10px;
+      padding-bottom: 10px;
       height:350px;
       display:flex;
       flex-direction:column;
@@ -38,7 +42,6 @@ min-width:200px;
 .user{
   font-size:17px;
 }
- 
  
 .messages{
   height:350px;
