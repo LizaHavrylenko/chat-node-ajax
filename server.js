@@ -3,6 +3,7 @@ const http = require('http').Server(app);
 const bodyParser = require('body-parser');
 const allMessages = [];
 const allUsers = [];
+const port = process.env.PORT || 5000;
 
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
@@ -35,6 +36,6 @@ app.post('/allUsers', function(req, res){
     res.end();
 })
 
-http.listen(5000, function(){
-    console.log('listening on 5000');
+http.listen(port, function(){
+    console.log(`listening on ${port}`);
 })
